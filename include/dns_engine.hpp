@@ -93,6 +93,9 @@ public:
     //   PTR   192.168.10.50         fileserver.lab.local  120
     bool load_from_file(const std::string& path) {
         std::ifstream fin(path);
+        // Tests use "group_project/config/..."; also accept "config/..." when run from the repo root
+        if (!fin.is_open() && path.rfind("group_project/", 0) == 0)
+            fin.open(path.substr(std::string("group_project/").size()));
         if (!fin.is_open()) return false;
 
         std::string line;

@@ -122,7 +122,7 @@ int main() {
         assert(up_pkts.size() == 2);
 
         // Export to .pcap and reload
-        const std::string pcap_path = "group_project/build/phase4_capture.pcap";
+        const std::string pcap_path = "build/phase4_capture.pcap";
         assert(session.export_pcap(pcap_path));
 
         CaptureSession reloaded;
