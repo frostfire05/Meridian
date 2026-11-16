@@ -71,7 +71,7 @@ int main(int argc, char* argv[]) {
     try {
         SocketRuntime runtime;
         uint16_t tap_port = TAP_SNIFFER_PORT;
-        std::string pcap_out = "group_project/build/capture.pcap";
+        std::string pcap_out = "build/capture.pcap";
         std::string read_path;
         std::string filter_text;
         bool verbose_tree = false;

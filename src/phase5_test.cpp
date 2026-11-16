@@ -256,7 +256,7 @@ int main() {
 
         // --------------------------------------------------------------------
         std::cout << "[TEST 6] Capture files: pcap (LE/BE, usec/nsec) + pcapng...\n";
-        const std::string base = "group_project/build/phase5";
+        const std::string base = "build/phase5";
         CHECK(session.export_pcap(base + ".pcap"));
         {
             CaptureSession re;
